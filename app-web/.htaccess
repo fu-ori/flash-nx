@@ -1,0 +1,12 @@
+RewriteEngine On
+
+# 1. Permite o acesso direto a arquivos e diretórios que existem
+RewriteCond %{REQUEST_FILENAME} -f [OR]
+RewriteCond %{REQUEST_FILENAME} -d
+RewriteRule ^ - [L]
+
+# 2. flash
+RewriteRule ^flash/?$ flash.php [L,QSA]
+
+# 3. display
+RewriteRule ^([a-zA-Z0-9\-]+)/?$ index.php?display=$1 [L,QSA]

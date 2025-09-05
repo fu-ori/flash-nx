@@ -1,0 +1,16 @@
+.form-basic{
+    width: 100%;
+    position: fixed;
+}
+
+.form-basic hr{
+    margin-top: 30px;
+}
+
+@media (orientation: portrait) {
+    .form-basic{
+        position: static;
+        padding-top: 30px;
+        padding-left: 20px;
+    }
+}

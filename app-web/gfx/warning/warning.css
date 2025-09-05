@@ -1,0 +1,15 @@
+.warning{
+    margin-bottom: 30px;
+    border-radius: 20px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background-color: white;
+    border: 1px solid var(--color3);
+    text-align: center;
+}
+.warning img{
+    width: 200px;
+}
+.warning a{
+    margin-top: 10px;
+}

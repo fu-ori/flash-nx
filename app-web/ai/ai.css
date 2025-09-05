@@ -1,0 +1,29 @@
+header{
+    padding-left: 10px;
+    padding-top: 10px;
+}
+main {
+    padding-left: 10%;
+    padding-right: 10%;
+}
+.view-url{
+    font-size: 10px;
+    text-transform: uppercase;
+    padding-bottom: 10px;
+    display: flex;
+    justify-content: flex-end;
+}
+.view-url a{
+    color: black;
+}
+.view-form-cta{
+    padding-top: 20px;
+    text-align: right;
+}
+.form-feedback{
+    text-align: right;
+}
+
+footer{
+    padding-left: 10%;
+}

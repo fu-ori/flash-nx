@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Design System</title>
+        <link rel="stylesheet" href="style.css" />
+        <style>
+            body {
+                line-height: 1.6;
+                margin: 0;
+                padding: 0;
+                color: #333;
+                background-color: #f4f7f9;
+                display: flex;
+            }
+            .container {
+                flex-grow: 1;
+                padding: 40px;
+                margin-left: 200px;
+                max-width: none;
+            }
+
+            nav {
+                position: fixed;
+                width: 200px;
+                height: 100vh;
+                background-color: #eee;
+                padding: 20px 0;
+            }
+
+            nav ul {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+            }
+
+            nav li a {
+                display: block;
+                padding: 10px 20px;
+                font-size: 12px;
+                text-decoration: none;
+                color: #555;
+                font-weight: bold;
+                transition: background-color 0.3s;
+            }
+
+            nav li a:hover {
+                background-color: #ddd;
+            }
+
+            main {
+                padding: 20px;
+                width: 1000px;
+            }
+
+            section {
+                background-color: #ffffff;
+                margin-bottom: 30px;
+                padding: 30px;
+                border-radius: 8px;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            }
+
+            .code-block {
+                width: 100%;
+                margin-top: 20px;
+                margin-bottom: 40px;
+                background-color: #eee;
+                color: black;
+                border-left: 10px solid orange;
+                padding: 10px;
+                overflow-x: auto;
+                border-radius: 4px;
+                font-size: 12px;
+                font-family: "Consolas", "Monaco", monospace;
+            }
+        </style>
+    </head>
+
+    <body class="page-container">
+        <nav>
+            <ul>
+                <li><a href="#introducao">1.0 - Introdução</a></li>
+                <li><a href="#ui">2.0 - UI / UX</a></li>
+                <li><a href="#buttons">3.1 - Botões</a></li>
+                <li><a href="#form">3.2 - Formulários</a></li>
+            </ul>
+        </nav>
+
+        <main class="container">
+            <section id="introducao">
+                <h1>1.0 - Introdução</h1>
+                <p>
+                    Bem-vindo ao manual do nosso Design System. Este guia foi criado para garantir a consistência e a
+                    qualidade em todos os nossos produtos digitais, servindo como uma fonte única da verdade para
+                    designers, desenvolvedores e gerentes de produto.
+                </p>
+            </section>
+
+            <section id="ui">
+                <h1>2.0 - UI / UX</h1>
+
+                <p>Como usar o sistema de grid para garantir alinhamento e espaçamento adequados.</p>
+                <p>Regras para margens e paddings.</p>
+                <p>Biblioteca de ícones e diretrizes de uso.</p>
+            </section>
+
+            <section id="buttons">
+                <h1>3.1 | Botões</h1>
+
+                <button class="btn">Botão Primário</button>
+                <div class="code-block">&lt;button class="btn btn-primary"&gt;Botão Primário&lt;/button&gt;</div>
+
+                <button class="btn btn-light">Botão Light</button>
+                <div class="code-block">&lt;button class="btn btn-light"&gt;Botão Light&lt;/button&gt;</div>
+
+                <button class="btn btn-dark">Botão Dark</button>
+                <div class="code-block">&lt;button class="btn btn-dark"&gt;Botão Dark&lt;/button&gt;</div>
+            </section>
+
+            <section id="form">
+                <h1>3.2 | Formulários</h1>
+
+                <div class="input">
+                    <span class="input-icon input-icon-outline">
+                        <svg
+                             xmlns="http://www.w3.org/2000/svg"
+                             fill="none"
+                             viewBox="0 0 24 24"
+                             stroke-width="1.5"
+                             stroke="currentColor"
+                             class="size-6">
+                            <path
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                  d="m12.75 15 3-3m0 0-3-3m3 3h-7.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                        </svg>
+                    </span>
+                    <input id="id" type="text" placeholder="Input Padrão" required />
+                </div>
+
+                <pre class="code-block">
+&lt;div class="input"&gt;
+    &lt;span class="input-icon input-icon-solid"&gt;
+        &lt;svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6"&gt;
+            &lt;path fill-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25Zm4.28 10.28a.75.75 0 0 0 0-1.06l-3-3a.75.75 0 1 0-1.06 1.06l1.72 1.72H8.25a.75.75 0 0 0 0 1.5h5.69l-1.72 1.72a.75.75 0 1 0 1.06 1.06l3-3Z" clip-rule="evenodd" /&gt;
+        &lt;/svg&gt;
+    &lt;/span&gt;
+    &lt;input
+        id="id"
+        type="text"
+        placeholder="Input padrão"
+        required&gt;
+&lt;/div&gt;
+</pre
+                >
+            </section>
+        </main>
+    </body>
+</html>

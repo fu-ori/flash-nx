@@ -1,0 +1,129 @@
+/*********************************************
+
+qrcard
+
+*********************************************/
+#qr-card{
+    display: flex;
+    background-color: var(--color2);
+    border-top: 1px solid var(--color4);
+    border-bottom: 1px solid var(--color4);
+}
+
+.qrcard-infos{
+    padding-top: 40px;
+    padding-left: 40px;
+    width: 40%;
+}
+.qrcard-container {
+    width: 300px; 
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+}
+
+#qr-code {
+    transform: scale(0.14); 
+    transform-origin: top left;
+}
+.qr-url{
+    width: 100%;
+    display: inline-block;
+    padding: 10px;
+    font-size: 12px;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: var(--color5);
+    background-color: var(--color1);
+}
+
+#qr-card address{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+#qr-card address p{
+    font-size: 12px !important;
+    text-transform: uppercase;
+    font-style: normal;
+    margin-bottom: 20px;
+}
+
+.qrcard-map{
+    width: 60%;
+}
+.qrcard-map iframe{
+    width: 100% !important;
+    height: 600px;
+    display: block;
+    border: 0;
+}
+
+.qrcard-social{
+    text-align: center;
+    padding: 40px;
+    color: var(--color3);
+    background-color: var(--color1);
+}
+.qrcard-social h2{
+    font-size: 20px;
+    text-transform: uppercase;
+}
+.qrcard-social ul{
+    display: inline-flex;
+}
+.qrcard-social ul li{
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.qrcard-social ul li a svg{
+    transition: fill 0.5s ease-in-out;
+    fill: var(--color4);
+    width: 60px;
+    height: 60px;
+}
+.qrcard-social ul li a svg:hover{
+    fill: var(--color6);
+}
+
+@media (orientation: portrait) {
+    #qr-card{
+        display: block;
+    }
+    .qrcard-infos{
+        padding-top: 20px;
+        padding-left: 20px;
+        width: 100%;
+    }
+    .qr-url{
+        width: 100%;
+        display: inline-block;
+        padding: 10px;
+        font-size: 12px;
+        text-transform: uppercase;
+        text-decoration: none;
+        color: var(--color5);
+        background-color: var(--color1);
+    }
+
+    .qrcard-map{
+        width: 100%;
+    }
+
+    .qrcard-social{
+        padding: 10px;
+    }
+    .qrcard-social h2{
+        margin-top: 40px;
+        color: var(--color3);
+        font-size: 12px;
+        text-transform: uppercase;
+    }
+    .qrcard-social ul li{
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .qrcard-social ul li a svg{
+        width: 30px;
+        height: 30px;
+    }
+}

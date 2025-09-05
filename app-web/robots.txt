@@ -1,0 +1,10 @@
+User-agent: *
+Disallow: /ai/
+
+User-agent: Googlebot
+Crawl-delay: 1
+
+User-agent: Bingbot
+Crawl-delay: 3
+
+Sitemap: https://www.spray.sampa.br/sitemap.xml
