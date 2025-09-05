@@ -10,20 +10,22 @@
     background-color: var(--color1);
     padding: 10px;
 }
-
+.nav-box ul li{
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-bottom: 6px;
+}
 .nav-box ul li button {
     transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
     border: 0;
     background: none;
     cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     text-transform: uppercase;
     font-size: 14px;
     color: var(--color4);
 }
 .nav-box ul li svg{
+    margin-bottom: -3px;
     color: var(--color4);
     width: 20px;
     height: 20px;

@@ -19,6 +19,8 @@
         <link rel="stylesheet" href="gfx/glightbox/glightbox.min.css?v0.1">
         <link rel="stylesheet" href="gfx/nav-box/nav-box.css?v0.1">
         <link rel="stylesheet" href="gfx/logo/logo.css?v0.1">
+        
+        <link rel="stylesheet" href="gfx/discount/discount.css">
         <style type="text/css">
             .logo{ right: 0 !important; }
             .logo-container{ background-image: url(<?php echo $gen_logo; ?>); }
@@ -26,7 +28,7 @@
 
         <!-- //////////////////////////////////////////////////////////////// -->
         <!-- //////////////////////////////////////////////////////////////// -->
-        <title><?php echo $project; ?> - <?php echo $gen_title; ?> </title>
+        <title><?php echo $gen_url; ?> | <?php echo $gen_title; ?> </title>
         <link rel="canonical" href="https://www.spray.sampa.br/<?php echo $gen_url; ?>" />
         <meta name="description" content="<?php echo $gen_bio; ?>" />
         <meta name="author" content="<?php echo $gen_url; ?>" />

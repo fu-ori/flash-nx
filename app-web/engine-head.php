@@ -1,8 +1,8 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-<meta name="msapplication-TileColor" content="#a8b4d5">
-<meta name="theme-color" content="#a8b4d5">
+<meta name="msapplication-TileColor" content="#F6F2E8">
+<meta name="theme-color" content="#F6F2E8">
 
 <meta name="msapplication-TileImage" content="gfx/seo/favicon-270x.png" />
 <link rel="icon" href="gfx/seo/favicon-32x.png" sizes="32x32" />

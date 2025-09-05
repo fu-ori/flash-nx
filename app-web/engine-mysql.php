@@ -1,9 +1,9 @@
 <?php
 
-$host = getenv('DB_HOST') ?: '';
-$user = getenv('DB_USER') ?: '';
-$pass = getenv('DB_PASS') ?: '';
-$mysql = getenv('DB_NAME') ?: '';
+$host = getenv('DB_HOST') ?: 'srv1800.hstgr.io';
+$user = getenv('DB_USER') ?: 'u193613732_flashnx';
+$pass = getenv('DB_PASS') ?: 'flashNX2011';
+$mysql = getenv('DB_NAME') ?: 'u193613732_flashnx';
 mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
 
 $connect = null;

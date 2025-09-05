@@ -5,9 +5,9 @@ qrcard
 *********************************************/
 #qr-card{
     display: flex;
-    background-color: var(--color2);
     border-top: 1px solid var(--color4);
     border-bottom: 1px solid var(--color4);
+    border-right: 1px solid var(--color4);
 }
 
 .qrcard-infos{
@@ -62,7 +62,6 @@ qrcard
     text-align: center;
     padding: 40px;
     color: var(--color3);
-    background-color: var(--color1);
 }
 .qrcard-social h2{
     font-size: 20px;
@@ -94,15 +93,18 @@ qrcard
         padding-left: 20px;
         width: 100%;
     }
+    .qrcard-container {
+        width: 200px; 
+        height: 200px;
+        overflow: hidden;
+        position: relative;
+    }
+    #qr-code {
+        transform: scale(0.09); 
+        transform-origin: top left;
+    }
     .qr-url{
         width: 100%;
-        display: inline-block;
-        padding: 10px;
-        font-size: 12px;
-        text-transform: uppercase;
-        text-decoration: none;
-        color: var(--color5);
-        background-color: var(--color1);
     }
 
     .qrcard-map{

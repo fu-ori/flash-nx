@@ -36,7 +36,7 @@ if ($connect) {
             $gen_section_3 = "gfx/qr-card/qr-card.php";
 
             echo "<style>
-            .logo{ padding-left: 0 !important; left: 0;} 
+            .logo{ display: none !important; }  
             .gfx{ display: none !important; } 
             </style>";
         }
