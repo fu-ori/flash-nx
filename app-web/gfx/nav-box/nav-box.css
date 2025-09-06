@@ -16,7 +16,7 @@
     cursor: pointer;
     text-transform: uppercase;
     font-size: 14px;
-    color: var(--color4);
+    color: var(--color3);
     background-color: var(--color2);
     padding-top: 10px;
     padding-bottom: 10px;
@@ -24,12 +24,12 @@
     padding-right: 30px;
 }
 .nav-box ul li button:hover{
-    color: var(--color3);
+    color: var(--color5);
     opacity: 0.5;
 }
 .nav-box ul li svg{
     margin-bottom: -3px;
-    color: var(--color4);
+    color: var(--color3);
     width: 20px;
     height: 20px;
 }

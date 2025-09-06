@@ -1,6 +1,6 @@
-<?php 
+<?php
 
-$version = "v0.3"; 
+$version = "v0.4";
 $project = "Flash NX";
 
 $gen_url = "fu-ori";

@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html lang="pt-br">
     <?php
-
     include "engine.php";
     include "engine-mysql.php";
 
-    $viewName = isset($_GET['stage']) ? $_GET['stage'] : "flash";
+    $viewName = isset($_GET["stage"]) ? $_GET["stage"] : "flash";
     $content = "Conteúdo não encontrado.";
 
     try {
@@ -19,9 +18,8 @@
         $result = $mysql->get_result();
         if ($result && $result->num_rows > 0) {
             $row = $result->fetch_assoc();
-            $content = $row['content'];
+            $content = $row["content"];
         }
-
     } catch (mysqli_sql_exception $e) {
         error_log("Erro ao buscar conteúdo: " . $e->getMessage());
         $content = "<p style='color: red;'>Erro ao carregar o conteúdo.</p>";
@@ -94,27 +92,17 @@
                 </div>
             </a>
 
-            <?php
-
-            include "gfx/nav-box/nav-box.php"; 
-
-            ?>
+            <?php include "gfx/nav-box/nav-box.php"; ?>
         </header>
 
         <main>
-            <?php 
-
-            echo $content;
-
-            ?>
+            <?php echo $content; ?>
         </main>
 
         <footer>
             <?php
-
             include "scripts.php";
-            include "gfx/footer-default/footer-default.php";      
-
+            include "gfx/footer-default/footer-default.php";
             ?>
         </footer>
     </body>

@@ -1,28 +1,22 @@
 <!DOCTYPE html>
 <html lang="pt-br">
     <?php
-    
     include "engine.php";
     include "engine-mysql.php";
     include "engine-display.php";
-    
     ?>
 
     <head>
         <?php include "engine-head.php"; ?>
-
-        <!-- //////////////////////////////////////////////////////////////// -->
-        <!-- //////////////////////////////////////////////////////////////// -->        
+        <link rel="stylesheet" href="gfx/footer-default/footer-default.css">
         <link rel="stylesheet" href="gfx/bio/bio.css?v0.1">
         <link rel="stylesheet" href="gfx/faq/faq.css?v0.1">
         <link rel="stylesheet" href="gfx/qr-card/qr-card.css?v0.1">
         <link rel="stylesheet" href="gfx/glightbox/glightbox.min.css?v0.1">
         <link rel="stylesheet" href="gfx/nav-box/nav-box.css?v0.1">
         <link rel="stylesheet" href="gfx/logo/logo.css?v0.1">
-
         <link rel="stylesheet" href="gfx/discount/discount.css">
         <style type="text/css">
-            .logo{ right: 0 !important; }
             .logo-container{ background-image: url(<?php echo $gen_logo; ?>); }
             <?php echo $gen_style; ?>
         </style>
@@ -62,6 +56,8 @@
     </head>
 
     <body>
+        <!-- //////////////////////////////////////////////////////////////// -->
+        <!-- //////////////////////////////////////////////////////////////// -->
         <script src="gfx/gsap/gsap.min.js"></script>
         <script src="gfx/gsap/scroll-trigger.min.js"></script>
         <script src="gfx/qr-code/qrcode.min.js"></script>

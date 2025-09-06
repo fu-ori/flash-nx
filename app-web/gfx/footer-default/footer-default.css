@@ -1,0 +1,14 @@
+.version{
+    letter-spacing: 2px;
+    text-align: left;
+    padding-left: 20px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-size: 10px;
+    text-transform: uppercase;
+}
+@media (orientation: portrait) {
+    .version{
+        margin-bottom: 130px;
+    }
+}

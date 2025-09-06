@@ -1,17 +1,18 @@
 .logo {
-    /* Base styles for all screen sizes */
     position: fixed;
-    padding-left: 10%;
+    transform: scale(0.6); 
+    transform-origin: top left;
 }
-
 .logo-container {
-    width: 120px;
-    height: 120px;
+    width: 275px;
+    height: 200px;
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
 }
 
 @media (orientation: portrait) {
-
+    .logo {
+        transform: scale(0.4); 
+    }
 }

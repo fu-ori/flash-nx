@@ -3,7 +3,7 @@
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 70vh;
+    height: 100vh;
     background: linear-gradient(0deg, var(--color1) 0, var(--color6));
 }
 
@@ -14,21 +14,23 @@
     box-shadow: 0 30px 40px 0 rgba(0, 0, 0, .2);
 }
 .discount h2{
-    background-image: linear-gradient(to right, var(--color4), var(--color6));
-    background-clip: text; 
+    background-image: linear-gradient(#ffcccc, var(--color4));
+    background-clip: text;
     -webkit-background-clip: text; 
     -webkit-text-fill-color: transparent; 
     color: #ff7e5f;
 }
 .discount p{
+    font-size: 20px;
+    color: var(--color3);
     margin-bottom: 20px;
 }
 .discount-off{
-    font-size: 20px;
+    font-size: 20px !important;
     text-decoration: line-through;
 }
 .discount-on{
-    font-size: 30px;
+    font-size: 30px !important;
 }
 
 @media (orientation: portrait) {

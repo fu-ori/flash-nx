@@ -1,0 +1,125 @@
+/*********************************************
+
+inputs
+
+*********************************************/
+.input { position: relative }
+.input-icon {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    pointer-events: none
+}
+.input-icon svg{
+    width: 40px;
+    height: 40px;
+}
+.input-icon-outline svg {
+    stroke: var(--color3) !important;
+    stroke-width: 1 !important;
+}
+.input-icon-solid svg {
+    fill: var(--color3) !important;
+}
+input[type="text"],
+input[type="email"] {
+    width: 100%;
+    height: 60px;
+    font-size: 16px;
+    border: 1px solid var(--color3);
+    padding-left: 60px
+}
+input::placeholder{
+    color: var(--color3);
+}
+input:focus::placeholder {
+    color: var(--color2);
+}
+input[type="text"]:focus {
+    outline: none;
+    color: var(--color5);
+    border-color: var(--color4);
+}
+
+
+
+
+
+
+/*********************************************
+
+grids
+
+*********************************************/
+.grid{
+    display: flex;
+    column-gap: 40px;
+}
+@media (orientation: portrait) {
+    .grid{
+        display: block;
+    }
+}
+
+
+
+/*********************************************
+
+align
+
+*********************************************/
+.align-vertical{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    outline: none;
+
+    font-size: 1rem;
+    color: var(--color1);
+    background-color: var(--color2);
+    border: 1px solid #ccc;
+    border-radius: 8px;
+
+    padding: 12px 40px 12px 16px;
+    cursor: pointer;
+}
+select:hover {
+    border-color: #007bff;
+}
+select:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 0 4px rgba(0, 123, 255, 0.25);
+}
+select:disabled {
+    background-color: #f0f0f0;
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+
+.select-wrapper {
+    margin-bottom: 30px;
+    position: relative;
+    display: inline-block;
+}
+.select-wrapper::after {
+    content: '▼'; 
+    font-size: 20px;
+    color: var(--color3);
+
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
