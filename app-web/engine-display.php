@@ -8,7 +8,8 @@ if ($connect) {
     try {
         $mysql = $connect->prepare("SELECT 
         id, client, url, local, logo,
-        contact, evaluate, views, user, pass, dev 
+        contact, evaluate, views, user, pass, 
+        gfx, style, dev 
         FROM clients WHERE url = ? LIMIT 1");
         $mysql->bind_param("s", $the_url);
         $mysql->execute();
@@ -17,23 +18,26 @@ if ($connect) {
         if ($result->num_rows > 0) {
             $content = $result->fetch_assoc();
 
-            $gen_client = htmlspecialchars($content["client"]);
-            $gen_url = htmlspecialchars($content["url"]);
-            $gen_local = htmlspecialchars($content["local"]);
-            $gen_logo = htmlspecialchars($content["logo"]);
-            $gen_contact = htmlspecialchars($content["contact"]);
+            $gen_client   = htmlspecialchars($content["client"]);
+            $gen_url      = htmlspecialchars($content["url"]);
+            $gen_local    = htmlspecialchars($content["local"]);
+            $gen_logo     = htmlspecialchars($content["logo"]);
+            $gen_contact  = htmlspecialchars($content["contact"]);
             $gen_evaluate = htmlspecialchars($content["evaluate"]);
-            $gen_views = htmlspecialchars($content["views"]);
+            $gen_views    = htmlspecialchars($content["views"]);
 
             $gen_user = htmlspecialchars($content["user"]);
             $gen_pass = htmlspecialchars($content["pass"]);
 
-            // ⚠️ FIX: Sanitize the 'dev' variable to prevent XSS.
-            $dev = $content["dev"];
+            $gen_gfxline   = htmlspecialchars($content["gfx"]);
+            $gfx = $gen_gfxline;
+            $fix_gfx = str_replace('.php', '.php,', $gfx);
+            $fix_gfx = rtrim($fix_gfx, ',');
+            $explode_gfx = explode(',', $fix_gfx);
 
-            $gen_section_1 = "gfx/bio/bio.php";
-            $gen_section_2 = "gfx/faq/faq.php";
-            $gen_section_3 = "gfx/qr-card/qr-card.php";
+            // ⚠️ FIX: Sanitize the 'dev' variable to prevent XSS.
+            $gen_style = $content["style"];
+            $gen_dev   = $content["dev"];
 
             echo "<style>
             .logo{ display: none !important; }  

@@ -11,14 +11,15 @@ body {
 }
 
 :root {    
-    --color1: #F6F2E8;
+    --color1: #ffffff;
     --color2: #e2e2e2;
     --color3: #666666;
-    --color4: #ff003a;
+    --color4: #ff6e6e;
     --color5: #2a2a2a;
     --color6: #C0D6EA;
 }
-
+::selection { background: var(--color4); }
+::-moz-selection { background: var(--color4); }
 ::-webkit-scrollbar { width: 60px; background-color: var(--color2); }
 ::-webkit-scrollbar-thumb { background-color: var(--color3); }
 ::-webkit-scrollbar-thumb:hover { background-color: var(--color4); }

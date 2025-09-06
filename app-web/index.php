@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-    <?php 
-
+    <?php
+    
     include "engine.php";
     include "engine-mysql.php";
-    include "engine-display.php"; 
-
+    include "engine-display.php";
+    
     ?>
 
     <head>
@@ -19,11 +19,12 @@
         <link rel="stylesheet" href="gfx/glightbox/glightbox.min.css?v0.1">
         <link rel="stylesheet" href="gfx/nav-box/nav-box.css?v0.1">
         <link rel="stylesheet" href="gfx/logo/logo.css?v0.1">
-        
+
         <link rel="stylesheet" href="gfx/discount/discount.css">
         <style type="text/css">
             .logo{ right: 0 !important; }
             .logo-container{ background-image: url(<?php echo $gen_logo; ?>); }
+            <?php echo $gen_style; ?>
         </style>
 
         <!-- //////////////////////////////////////////////////////////////// -->
@@ -73,30 +74,27 @@
                 <div class="logo-container"></div>
             </div>
 
-            <?php
-
-            include "gfx/nav-box/nav-box.php"; 
-
-            ?>
+            <?php include "gfx/nav-box/nav-box.php"; ?>
         </header>
 
         <main>
-            <?php 
-
+            <?php
             include "gfx/hello-world/hello-world.php";
-            include $gen_section_1;
-            include $gen_section_2;
-            include $gen_section_3;
-
+            foreach ($explode_gfx as $gen_gfx) {
+                $gen_gfx = trim($gen_gfx);
+                if (!empty($gen_gfx) && file_exists($gen_gfx)) {
+                    include $gen_gfx;
+                } else {
+                    echo "GFX error";
+                }
+            }
             ?>
         </main>
 
         <footer>
             <?php
-
             include "scripts.php";
-            include "gfx/footer-default/footer-default.php";      
-
+            include "gfx/footer-default/footer-default.php";
             ?>
         </footer>
     </body>
